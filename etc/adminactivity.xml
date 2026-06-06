@@ -503,49 +503,6 @@
                 <itemfield field="attribute_set_name" />
             </config>
         </module>
-        <module name="product_review_rating">
-            <label translate="true">Product Review Rating</label>
-            <models>
-                <class name="Magento\Review\Model\Rating" />
-            </models>
-            <events>
-                <event controller_action="review_rating_save" action_alias="save" />
-                <event controller_action="review_rating_edit" action_alias="edit" />
-                <event controller_action="review_rating_delete" action_alias="delete" />
-            </events>
-            <config>
-                <skip_fields>
-                    <field>rating_id</field>
-                    <field>check_if_is_new</field>
-                </skip_fields>
-                <configpath constant="MODULE_ATTRIBUTE" />
-                <editurl url="{{module}}/{{controller}}/edit/id/{{id}}" />
-                <itemfield field="rating_code" />
-            </config>
-        </module>
-        <module name="product_review">
-            <label translate="true">Product Review</label>
-            <models>
-                <class name="Magento\Review\Model\Review" />
-            </models>
-            <events>
-                <event controller_action="review_product_post" action_alias="save" />
-                <event controller_action="review_product_save" action_alias="edit" />
-                <event controller_action="review_product_delete" action_alias="delete" />
-            </events>
-            <config>
-                <skip_fields>
-                    <field>form_key</field>
-                    <field>entity_id</field>
-                    <field>check_if_is_new</field>
-                    <field>review_id</field>
-                    <field>entity_pk_value</field>
-                </skip_fields>
-                <configpath constant="MODULE_ATTRIBUTE" />
-                <editurl url="{{module}}/{{controller}}/edit/id/{{id}}" />
-                <itemfield field="nickname" />
-            </config>
-        </module>
         <module name="admin_user">
             <label translate="true">Admin User</label>
             <models>
