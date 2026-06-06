@@ -61,9 +61,6 @@
                 <!-- Tax -->
                 <item name="Magento\Tax\Model\Calculation\Rule" xsi:type="object">Magento\Tax\Model\Calculation\RuleFactory</item>
                 <item name="Magento\Tax\Model\Calculation\Rate" xsi:type="object">Magento\Tax\Model\Calculation\RateFactory</item>
-                <!-- Review -->
-                <item name="Magento\Review\Model\Review" xsi:type="object">Magento\Review\Model\ReviewFactory</item>
-                <item name="Magento\Review\Model\Rating" xsi:type="object">Magento\Review\Model\RatingFactory</item>
                 <!-- Store -->
                 <item name="Magento\Store\Model\Store" xsi:type="object">Magento\Store\Model\StoreFactory</item>
                 <item name="Magento\Store\Model\Website" xsi:type="object">Magento\Store\Model\WebsiteFactory</item>
