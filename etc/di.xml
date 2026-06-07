@@ -37,48 +37,48 @@
         <arguments>
             <argument name="modelFactories" xsi:type="array">
                 <!-- Catalog -->
-                <item name="Magento\Catalog\Model\Product" xsi:type="object">Magento\Catalog\Model\ProductFactory</item>
-                <item name="Magento\Catalog\Model\Product\Action" xsi:type="object">Magento\Catalog\Model\Product\ActionFactory</item>
-                <item name="Magento\Catalog\Model\Category" xsi:type="object">Magento\Catalog\Model\CategoryFactory</item>
-                <item name="Magento\Catalog\Model\ResourceModel\Eav\Attribute" xsi:type="object">Magento\Catalog\Model\ResourceModel\Eav\AttributeFactory</item>
+                <item name="Magento\Catalog\Model\Product" xsi:type="string">Magento\Catalog\Model\ProductFactory</item>
+                <item name="Magento\Catalog\Model\Product\Action" xsi:type="string">Magento\Catalog\Model\Product\ActionFactory</item>
+                <item name="Magento\Catalog\Model\Category" xsi:type="string">Magento\Catalog\Model\CategoryFactory</item>
+                <item name="Magento\Catalog\Model\ResourceModel\Eav\Attribute" xsi:type="string">Magento\Catalog\Model\ResourceModel\Eav\AttributeFactory</item>
                 <!-- Customer -->
-                <item name="Magento\Customer\Model\Customer" xsi:type="object">Magento\Customer\Model\CustomerFactory</item>
-                <item name="Magento\Customer\Model\Address" xsi:type="object">Magento\Customer\Model\AddressFactory</item>
-                <item name="Magento\Customer\Model\Group" xsi:type="object">Magento\Customer\Model\GroupFactory</item>
-                <item name="Magento\Newsletter\Model\Subscriber" xsi:type="object">Magento\Newsletter\Model\SubscriberFactory</item>
+                <item name="Magento\Customer\Model\Customer" xsi:type="string">Magento\Customer\Model\CustomerFactory</item>
+                <item name="Magento\Customer\Model\Address" xsi:type="string">Magento\Customer\Model\AddressFactory</item>
+                <item name="Magento\Customer\Model\Group" xsi:type="string">Magento\Customer\Model\GroupFactory</item>
+                <item name="Magento\Newsletter\Model\Subscriber" xsi:type="string">Magento\Newsletter\Model\SubscriberFactory</item>
                 <!-- CMS -->
-                <item name="Magento\Cms\Model\Page" xsi:type="object">Magento\Cms\Model\PageFactory</item>
-                <item name="Magento\Cms\Model\Block" xsi:type="object">Magento\Cms\Model\BlockFactory</item>
-                <item name="Magento\Widget\Model\Widget\Instance" xsi:type="object">Magento\Widget\Model\Widget\InstanceFactory</item>
+                <item name="Magento\Cms\Model\Page" xsi:type="string">Magento\Cms\Model\PageFactory</item>
+                <item name="Magento\Cms\Model\Block" xsi:type="string">Magento\Cms\Model\BlockFactory</item>
+                <item name="Magento\Widget\Model\Widget\Instance" xsi:type="string">Magento\Widget\Model\Widget\InstanceFactory</item>
                 <!-- Email -->
-                <item name="Magento\Email\Model\Template" xsi:type="object">Magento\Email\Model\TemplateFactory</item>
-                <item name="Magento\Newsletter\Model\Template" xsi:type="object">Magento\Newsletter\Model\TemplateFactory</item>
+                <item name="Magento\Email\Model\Template" xsi:type="string">Magento\Email\Model\TemplateFactory</item>
+                <item name="Magento\Newsletter\Model\Template" xsi:type="string">Magento\Newsletter\Model\TemplateFactory</item>
                 <!-- Promotions -->
-                <item name="Magento\CatalogRule\Model\Rule" xsi:type="object">Magento\CatalogRule\Model\RuleFactory</item>
-                <item name="Magento\SalesRule\Model\Rule" xsi:type="object">Magento\SalesRule\Model\RuleFactory</item>
+                <item name="Magento\CatalogRule\Model\Rule" xsi:type="string">Magento\CatalogRule\Model\RuleFactory</item>
+                <item name="Magento\SalesRule\Model\Rule" xsi:type="string">Magento\SalesRule\Model\RuleFactory</item>
                 <!-- Sales -->
-                <item name="Magento\Sales\Model\Order\Address" xsi:type="object">Magento\Sales\Model\Order\AddressFactory</item>
+                <item name="Magento\Sales\Model\Order\Address" xsi:type="string">Magento\Sales\Model\Order\AddressFactory</item>
                 <!-- Tax -->
-                <item name="Magento\Tax\Model\Calculation\Rule" xsi:type="object">Magento\Tax\Model\Calculation\RuleFactory</item>
-                <item name="Magento\Tax\Model\Calculation\Rate" xsi:type="object">Magento\Tax\Model\Calculation\RateFactory</item>
+                <item name="Magento\Tax\Model\Calculation\Rule" xsi:type="string">Magento\Tax\Model\Calculation\RuleFactory</item>
+                <item name="Magento\Tax\Model\Calculation\Rate" xsi:type="string">Magento\Tax\Model\Calculation\RateFactory</item>
                 <!-- Store -->
-                <item name="Magento\Store\Model\Store" xsi:type="object">Magento\Store\Model\StoreFactory</item>
-                <item name="Magento\Store\Model\Website" xsi:type="object">Magento\Store\Model\WebsiteFactory</item>
-                <item name="Magento\Store\Model\Group" xsi:type="object">Magento\Store\Model\GroupFactory</item>
+                <item name="Magento\Store\Model\Store" xsi:type="string">Magento\Store\Model\StoreFactory</item>
+                <item name="Magento\Store\Model\Website" xsi:type="string">Magento\Store\Model\WebsiteFactory</item>
+                <item name="Magento\Store\Model\Group" xsi:type="string">Magento\Store\Model\GroupFactory</item>
                 <!-- SEO -->
-                <item name="Magento\UrlRewrite\Model\UrlRewrite" xsi:type="object">Magento\UrlRewrite\Model\UrlRewriteFactory</item>
-                <item name="Magento\Search\Model\Query" xsi:type="object">Magento\Search\Model\QueryFactory</item>
-                <item name="Magento\Search\Model\SynonymGroup" xsi:type="object">Magento\Search\Model\SynonymGroupFactory</item>
-                <item name="Magento\Sitemap\Model\Sitemap" xsi:type="object">Magento\Sitemap\Model\SitemapFactory</item>
+                <item name="Magento\UrlRewrite\Model\UrlRewrite" xsi:type="string">Magento\UrlRewrite\Model\UrlRewriteFactory</item>
+                <item name="Magento\Search\Model\Query" xsi:type="string">Magento\Search\Model\QueryFactory</item>
+                <item name="Magento\Search\Model\SynonymGroup" xsi:type="string">Magento\Search\Model\SynonymGroupFactory</item>
+                <item name="Magento\Sitemap\Model\Sitemap" xsi:type="string">Magento\Sitemap\Model\SitemapFactory</item>
                 <!-- EAV -->
-                <item name="Magento\Eav\Model\Entity\Attribute\Set" xsi:type="object">Magento\Eav\Model\Entity\Attribute\SetFactory</item>
+                <item name="Magento\Eav\Model\Entity\Attribute\Set" xsi:type="string">Magento\Eav\Model\Entity\Attribute\SetFactory</item>
                 <!-- Admin -->
-                <item name="Magento\User\Model\User" xsi:type="object">Magento\User\Model\UserFactory</item>
-                <item name="Magento\Authorization\Model\Role" xsi:type="object">Magento\Authorization\Model\RoleFactory</item>
+                <item name="Magento\User\Model\User" xsi:type="string">Magento\User\Model\UserFactory</item>
+                <item name="Magento\Authorization\Model\Role" xsi:type="string">Magento\Authorization\Model\RoleFactory</item>
                 <!-- Integration -->
-                <item name="Magento\Integration\Model\Integration" xsi:type="object">Magento\Integration\Model\IntegrationFactory</item>
+                <item name="Magento\Integration\Model\Integration" xsi:type="string">Magento\Integration\Model\IntegrationFactory</item>
                 <!-- Checkout -->
-                <item name="Magento\CheckoutAgreements\Model\Agreement" xsi:type="object">Magento\CheckoutAgreements\Model\AgreementFactory</item>
+                <item name="Magento\CheckoutAgreements\Model\Agreement" xsi:type="string">Magento\CheckoutAgreements\Model\AgreementFactory</item>
             </argument>
         </arguments>
     </type>
