@@ -15,21 +15,29 @@ namespace MageOS\AdminActivityLog\Model;
 
 use InvalidArgumentException;
 use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\ObjectManagerInterface;
 use MageOS\AdminActivityLog\Api\ModelResolverInterface;
 
 /**
  * Model resolver for dynamic model loading
  *
- * Resolves and instantiates models via a DI-injected factory map keyed by FQCN.
- * Only classes explicitly registered in the factory map can be instantiated,
- * which enforces the security allowlist without requiring ObjectManager.
+ * Resolves and instantiates models via a DI-injected allowlist that maps a
+ * model FQCN to its factory FQCN. The factory is resolved lazily (only when a
+ * model of that type is actually saved) — the map holds class-name strings, not
+ * eagerly-built factory instances. This keeps the security allowlist (only
+ * registered classes are ever instantiated) while staying safe in reduced
+ * distributions: an entry for a module that isn't installed simply never
+ * resolves, instead of fatally instantiating a missing factory just to build
+ * this resolver.
  */
 class ModelResolver implements ModelResolverInterface
 {
     /**
-     * @param array<class-string, object> $modelFactories Map of FQCN => factory instance (must expose create())
+     * @param ObjectManagerInterface $objectManager
+     * @param array<class-string, class-string> $modelFactories Map of model FQCN => factory FQCN (factory must expose create())
      */
     public function __construct(
+        private readonly ObjectManagerInterface $objectManager,
         private readonly array $modelFactories = []
     ) {
     }
@@ -47,7 +55,7 @@ class ModelResolver implements ModelResolverInterface
             );
         }
 
-        return $this->modelFactories[$className]->create();
+        return $this->objectManager->get($this->modelFactories[$className])->create();
     }
 
     /**
